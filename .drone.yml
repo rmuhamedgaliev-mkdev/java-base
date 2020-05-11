@@ -1,0 +1,6 @@
+build:
+  image: adoptopenjdk/openjdk14:alpine
+  environment:
+    - GRADLE_USER_HOME=~/.gradle
+  commands:
+    - ./gradlew check

@@ -1,4 +1,4 @@
-package io.github.rmuhamedgaliev;
+package io.github.mkdev;
 
 public class App {
   public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package io.github.rmuhamedgaliev;
+package io.github.mkdev;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 

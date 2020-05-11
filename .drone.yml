@@ -1,6 +1,9 @@
-build:
-  image: adoptopenjdk/openjdk14:alpine
-  environment:
-    - GRADLE_USER_HOME=~/.gradle
-  commands:
-    - ./gradlew check
+kind: pipeline
+type: docker
+name: greeting
+
+steps:
+  - name: check
+    image: adoptopenjdk/openjdk14:alpine
+    commands:
+      - ./gradlew check

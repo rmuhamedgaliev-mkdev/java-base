@@ -1,6 +1,6 @@
 kind: pipeline
 type: docker
-name: greeting
+name: check-java base
 
 steps:
   - name: check

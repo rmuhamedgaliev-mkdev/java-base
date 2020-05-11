@@ -5,5 +5,8 @@ name: greeting
 steps:
   - name: check
     image: adoptopenjdk/openjdk14:alpine
+    volumes:
+      - name: cache
+        path: ~/.gradle
     commands:
       - ./gradlew check

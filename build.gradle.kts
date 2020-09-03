@@ -6,6 +6,7 @@ plugins {
     id("com.github.spotbugs") version "4.5.0"
     jacoco
     id("nebula.release") version "15.1.0"
+    id("com.github.jakemarsden.git-hooks") version "0.0.2"
 }
 
 extra.set("junitVersion", "5.6.2")
@@ -63,10 +64,8 @@ tasks.withType<Test> {
     finalizedBy(tasks.getByName("jacocoTestReport"))
 }
 
-//tasks.jacocoTestReport {
-//    reports {
-//        xml.isEnabled = false
-//        csv.isEnabled = false
-//        html.destination = file("${buildDir}/jacocoHtml")
-//    }
-//}
+gitHooks {
+    setHooks(mapOf("pre-commit" to "check"))
+    setHooks(mapOf("pre-commit" to "check test"))
+}
+
